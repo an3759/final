@@ -1,0 +1,21 @@
+<style>
+	body{}
+	.set{
+		margin: 0px 200px 100px 200px;
+	}
+	@media all and (max-width:900px) {
+    	.set{ margin: 0px 20px 100px 20px;}
+    }
+	.product-num{
+		border: 1px solid #e3e3e3;
+        display: inline-block;
+        text-align: center;
+	}
+	.num-input{
+		width: 40px;
+        height: 28px;
+        line-height: 28px;
+        border: none;
+        text-align: center;
+	}
+</style>

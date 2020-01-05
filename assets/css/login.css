@@ -1,0 +1,136 @@
+<style>
+    @font-face{}
+    @font-face{
+      font-family:"華康翩翩體";
+      src:url(華康翩翩體.otf);
+    }
+    @font-face{
+      font-family:"BernardoModaBold";
+      src:url(BernardoModaBold.ttf);
+    }
+
+
+    body{
+      background-color: #fffafa;
+      font-family:微软雅黑;
+    }
+    a{color: #666666;}
+    a:hover{color: #f08080;}
+
+
+/*/////////////////////////////*/
+
+    .nav-logoword{
+      font-family: BernardoModaBold;
+      font-weight: bold;
+      font-size: 40px;
+    }
+    .nav-logoword2{
+      cursor: default;
+      font-family: 微软雅黑;
+      text-indent: 120px;
+      font-size: 20px;
+    }
+    .字pic{
+      width: 180px;
+      height: 78px;
+      margin: -55px 0px 0px 0px;
+    }
+    @media all and (max-width:500px) {
+      .aaaa { display: none; }
+    }
+    .navhr{
+      width: 100%;
+      background-color:lightgray;
+    }
+
+  /*footer*/
+    .footerhr{
+      height: 1px;
+      width: 100%;
+      background-color:black;
+    }
+
+    .word1{
+      cursor: default;
+      font-family: BernardoModaBold;
+      text-align: center;
+      font-weight: bold;
+      font-size: 25px;
+    }
+    .word2{
+      cursor: default;
+      text-align: center;
+      font-size: 12px;
+    }
+    .size{ font-size:24px;}
+    .copyright{
+      cursor: default;
+      text-align: center;
+      font-size: 13px;
+    }
+/*//////////////////上面都不要動/////////////////////////*/
+
+    table{ 
+      text-align: center;
+      margin: 100px 0px;
+    }
+    h6{ 
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: bolder;
+    }
+
+
+    .form-control{
+      margin-left: auto;
+      margin-right: auto;
+      width: 300px;
+      height: 35px;
+    }
+    .form-check-label{
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .home-sign{
+      margin-top: 5px;
+      width: 115px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 18px;
+    }
+
+    /*圖片*/
+    .bbb{
+      position: relative;
+      margin-bottom: 150px;
+    }
+    @media all and (max-width:770px) {
+      .bbb { display: none; }
+    }
+    .dec-pic{
+      width: 300px;
+      height: 450px;
+      margin-top: 50px;
+    }
+    .dec-pic-w{
+      font-family: 華康翩翩體;
+      font-size: 35px;
+      color: white;
+    }
+    .dec-pic-w2{
+      font-family: 華康翩翩體;
+      font-size: 35px;
+      color: white;
+      text-indent: 85px;
+    }
+    .ccc{
+      position: absolute;
+      top: 190px;
+      left: 110px;
+      background:rgba(0,0,0,0.6);
+      padding: 50px;
+    }
+
+</style>

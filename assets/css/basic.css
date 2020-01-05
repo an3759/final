@@ -1,0 +1,177 @@
+<style>
+    @font-face{}
+    @font-face{
+      font-family:"華康翩翩體";
+      src:url(華康翩翩體.otf);
+    }
+    @font-face{
+      font-family:"BernardoModaBold";
+      src:url(BernardoModaBold.ttf);
+    }
+    @font-face{
+      font-family:"I.Ngaan";
+      src:url(INgaan.ttf);
+    }
+    @font-face{
+      font-family:"Magnolia Light";
+      src:url(MagnoliaLight.ttf);
+    }
+
+
+    body{
+      background-color: #fffafa;
+      font-family:微软雅黑;
+      padding: 200px 0px 0px 0px;
+    }
+    a{color: #666666;}
+    a:hover{color: #f08080;}
+
+    .back-to-top 
+    {
+     display: none; /* 默認是隱藏的，這樣在第一屏才不顯示 */
+     position: fixed; /* 位置是固定的 */
+     bottom: 10px; /* 顯示在頁面底部 */
+     right: 40px; /* 顯示在頁面的右邊 */
+     z-index: 99; /* 確保不被其他功能覆蓋 */
+     color: black; /* 設置文本顏色 */
+     cursor: pointer; /* 滑鼠移到按鈕上顯示手型 */
+    }
+    .back-to-top:hover{color: black;}
+
+
+    .fixed-bottom{
+      background-color: #fffafa;
+      width: 100%;
+      z-index: 99;
+      display: none;
+    }
+    @media all and (max-width:500px) {
+      .computer { display: none; }
+      .fixed-bottom{ display: block;}
+    }
+  
+
+
+
+  /*nav*/
+    .fixed-top{
+      background-color: #fffafa;
+      width: 100%;
+      z-index: 99;
+    }
+/*/////////////////////////////*/
+    .nav-topset{ margin: 0px 10px -10px 0px;}
+    .top-color:hover{ color: #FF88C2;}
+
+    .nav-logoword{
+      font-family: BernardoModaBold;
+      font-weight: bold;
+      font-size: 30px;
+      color: black;
+    }    
+    .nav-logoword2{
+      font-family: 微软雅黑;
+      text-indent: 10px;
+      font-size: 15px;
+    }
+    .nav-logoword:hover{ color: black;}
+/*/////////////////////////////*/
+    .nav-downset{ 
+      padding: 10px 0px 20px 0px;      
+    }
+    .underline:hover{ text-decoration:underline;}
+
+    .title{margin: 0px 14px;}
+    .title2{
+      display:none;
+      text-align: center;
+    }
+    .hot:hover .title{ display: none;}
+    .hot:hover .title2{ display: block;}
+
+    .a-title2{
+      display:none;
+      text-align: center;
+      margin: 0px 1px;
+      width: 90px;
+    }
+    .a1{
+      position: absolute;
+      text-align: center;
+      background-color: #FAEBD7;
+      width: 90px;
+      display: none;
+      padding: 10px 0px;
+      margin-top: -10px;
+    }   
+    .a:hover .a-title{ display: none;}
+    .a:hover .a-title2{ display: block;}
+    .a:hover .a1{ display: block;}
+
+    .b-title2{
+      display:none;
+      margin: 0px 2px 0px 1px;
+    }
+    .b1{
+      position: absolute;
+      text-align: center;
+      background-color: #FAEBD7;
+      width: 90px;
+      margin-left: -13px;
+      display: none;
+      padding: 10px 0px;
+      margin-top: -10px;
+    }
+    .b:hover .b-title{ display: none;}
+    .b:hover .b-title2{ display: block;}
+    .b:hover .b1{ display: block;}
+
+    .c-title2{
+      display:none;
+      text-align: center;
+      width: 120px;
+    }
+    .c1{
+      position: absolute;
+      width: 120px;
+      text-align: center;
+      background-color: #FAEBD7;
+      display: none;
+      padding: 10px 0px;
+      margin-top: -10px;
+    }
+    .c:hover .c-title{ display: none;}
+    .c:hover .c-title2{ display: block;}
+    .c:hover .c1{display: block;}
+
+    .search{
+      width: 120px;
+      height: 30px;
+    }
+
+  /*footer*/
+    .footerhr{
+      height: 1px;
+      width: 100%;
+      background-color:black;
+    }
+
+    .word1{
+      cursor: default;
+      font-family: BernardoModaBold;
+      text-align: center;
+      font-weight: bold;
+      font-size: 25px;
+    }
+    .word2{
+      cursor: default;
+      text-align: center;
+      font-size: 12px;
+    }
+    .size{ font-size:24px;}
+    .copyright{
+      cursor: default;
+      text-align: center;
+      font-size: 13px;
+    }
+</style>

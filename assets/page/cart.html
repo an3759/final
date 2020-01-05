@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">   
+
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    
+
+    <title>AnxinsunWC - Cart</title>
+
+  </head>
+
+  <body>
+
+	<div class="container-fluid">
+		<a class="nav-link navbar-brand nav-logoword" href="../../index.html">AnxinsunWC</a>
+        <nav class="nav justify-content-between navbar-expand-xl|lg|md|sm nav-topset">
+			<p class="nav-logoword2">Second Hand Store</p>
+	        <form class="form-inline">	          
+	          <div class="aaaa"><img class="字pic" src="../pic/login/word.png"></div>
+	        </form>
+	    </nav>
+	</div>
+
+	<hr class="navhr">
+<!---------------------------------------- 以上都不要動------------------------------->
+	<div class="container" style="margin-bottom: 100px;">
+
+		<div id="step1">
+			<nav class="nav cart-title">
+				<h4 class="nav-link">Step.1&nbsp;購物清單</h4>
+				<h4 class="nav-link" style="color:gray;">Step.2&nbsp;填寫地址</h4>
+			</nav>
+	    	
+		    <table class="table table-hover">	    	
+		        <thead>
+		           <tr>
+		              <th>
+		                <div class="checkbox">
+		                    <label>
+		                      <input type="checkbox" @click="selectAll(isSelectAll)" v-bind:checked="isSelectAll"> 全選
+		                    </label>
+		                </div>
+		              </th>
+		              <th>商品</th>
+		              <th>數量</th>
+		              <th>單價</th>
+		              <th>金額（元）</th>
+		           </tr>
+		        </thead>
+
+		        <tbody>
+		           <tr v-for="(item,index) in productList">
+		              <td>
+		                <label>
+		                	<input type="checkbox" @click="item.select=!item.select;console.log(item.select)" v-bind:checked="item.select" id="">
+		                </label>
+		              </td>
+		              <td name="name">{{item.name}}</td>
+		              <td>
+		                <div class="product-num">
+		                    <a href="javascript:;" @click="item.num>0?item.num--:0">–</a>
+		                    <input type="text" class="num-input" v-model="item.num" name="num">
+		                    <a href="javascript:;" @click="item.num++">+</a>
+		                </div>
+		              </td>
+		              <td name="">{{item.price}}</td>
+		              <td name="">{{item.price*item.num}}</td>
+		           </tr>
+		        </tbody>
+
+		    </table>
+		    <nav class="nav">
+	            <a class="nav-link" href="##"><i class="fas fa-trash"></i>&nbsp;刪除所選商品</a>
+		        <a class="nav-link" href="../../index.html"><i class="fas fa-shopping-cart"></i>&nbsp;繼續購物</a>
+		    </nav>
+		    <nav class="nav" style="float: right;">
+			    <div class="nav-link">總計（不含運費）：$<span id="price">{{getTotal.totalPrice}}</span></div>
+			    <button type="button" onclick="toStep2()" class="btn btn-outline-info">下一步</button>
+			</nav>
+		</div>
+
+
+
+
+		<div id="step2" style="display: none;">
+			<nav class="nav cart-title">
+				<h4 class="nav-link" style="color:gray;">Step.1&nbsp;購物清單</h4>
+				<h4 class="nav-link">Step.2&nbsp;填寫地址</h4>
+			</nav>
+
+			<form role="form" data-toggle="validator">
+				<table class=" table-borderless">				
+					<tr>
+						<td>
+							<div class="form-group">
+								<span>取貨方式&nbsp;:&nbsp;</span>
+					        	<label for="register-7-11" class="radio control-inline">
+					          		<input type="radio" id="register-7-11" name="payment" required="required" onclick="choosepay1()" required="required"/>
+					          		超商取貨
+					        	</label>
+
+					        	<label for="register-delivery" class="radio control-inline">
+						          	<input type="radio" id="register-delivery" name="payment" required="required" onclick="choosepay2()" required="required"/>
+						          	宅配
+						        </label>
+
+						        <div class="help-block with-errors"></div>
+							</div>							
+						</td>
+					</tr>
+
+					<tr>
+						<td id="function1" style="display: none;">
+							<div class="form-group">
+								<span>門市&nbsp;:&nbsp;</span>
+								<input name="address" type="text" maxlength="100" placeholder="我們該送到哪裡呢？"><br><br>
+								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1737373.6701895404!2d120.9990936765683!3d23.911749590344275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1577617868063!5m2!1szh-TW!2stw" frameborder="0" style="border:0;"></iframe>
+							</div>
+						</td>
+					</tr>
+
+					<tr>
+						<td id="function2" style="display: none;">
+							<div class="form-group">
+								<span>地址&nbsp;:&nbsp;</span>
+								<input name="address" type="text" maxlength="100" placeholder="我們該送到哪裡呢？">
+							</div>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<nav class="nav" style="float: right;">					    
+							    <div class="nav-link">
+							    	<button type="button" onclick="back()" class="btn btn-outline-secondary">上一步</button>
+								</div>
+
+								<div class="nav-link">
+							    	<input type="submit" value="確認購買" class="btn btn-outline-info" />
+							    </div>
+							</nav>
+						</td>
+					</tr>				
+				</table>
+			</form>
+
+		</div>
+
+	</div>
+<!---------------------------------------- 以下都不要動------------------------------->
+
+	<footer class="text-center">
+	  <hr class="footerhr">
+	  <br>
+	  <p class="word1">AnxinsunWC</p>
+	  <p class="word2">Smile Never Goes Out of Fashion</p>
+
+	  <nav class="nav justify-content-center">
+	    <a class="nav-link" href="#"><i class="fab fa-facebook-square size"></i></a>
+	    <a class="nav-link" href="#"><i class="fab fa-instagram size"></i></a>
+	    <a class="nav-link" href="#"><i class="fab fa-line size"></i></a>
+	    <a class="nav-link" href="#"><i class="fas fa-envelope size"></i></a>
+	  </nav>
+
+	  <br>
+      <a style="text-align: center;" href="aboutus.html">About Us</a>
+      <br><br>
+	  <p class="copyright">ⓒ 2019 AnxinsunWC. All RIGHTS RESERVED.</p>
+	</footer>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+
+	<script src="../js/cart.js" type="text/javascript"></script>
+
+	<!--引用 Validator-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+
+<!---------------------------------------- 以上都不要動------------------------------->
+
+  </body>
+</html>

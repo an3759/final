@@ -1,0 +1,14 @@
+<style>
+	body{}
+	.set{ margin: 100px 300px;}
+	@media all and (max-width:770px) {
+		.set{ margin: 100px 30px 100px 120px;}		
+	}
+
+	.set2{
+		margin-left: 150px;
+	}
+	@media all and (max-width:440px) {
+		.set2{ margin-left: 0px;}	
+	}
+</style>

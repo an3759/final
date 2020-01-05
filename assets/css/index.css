@@ -1,0 +1,73 @@
+<style>
+	body{}
+    body{
+        margin-top: -53px;
+    }
+    .a-men:hover{text-decoration:none;}
+    .a-women:hover{text-decoration:none;}
+
+	.s2{
+		margin: 180px 0px 200px 0px;
+	}
+	.s2-men{
+		font-size: 60px;
+		color: white;
+	}
+	.s2-word{
+		font-size: 20px;
+		color: #DDDDDD;
+		font-family:"I.Ngaan";
+	}
+	@media all and (max-width:700px) {
+    	.s2-2{ display: none;}
+    }
+
+    .aaaa{ height: 650px; }
+
+    .s3-1{
+    	margin: -90px 100px 0px auto;
+    }
+	.s3-2{
+    	margin: 300px 170px 0px auto;
+    }
+    @media all and (max-width:770px) {
+    	.aaaa{ height: 300px; }
+    	.abbb{ display: none;}
+    	.accc{ height: 400px; }
+    	.bbbb{ margin: 350px auto 40px auto; }
+    	.s3-word{ color: #AAAAAA; font-weight: bolder;}
+    }
+    .s3-3{
+    	margin: -570px auto 40px auto;
+    }
+
+    .s3-word{
+    	font-size: 40px;
+    	font-family: Magnolia Light;
+    	text-align: center;
+    	color: black;
+    	font-weight:bold;	
+    }
+
+	.s4{
+		padding: 150px 10px 150px 10px;
+		background-color: #fffafa;
+	}
+	.s4a{padding-left: 100px;}
+	.s4b{padding-right: 100px;}
+	.s4-2{
+		padding: 150px 75px 150px 0px;
+		background-color: #fffafa;
+	}
+	@media all and (max-width:770px) {
+		.s4-2{ display: none;}
+		.s4a{ padding-left: 20px;}
+		.s4b{padding-right: 20px;}
+	}
+	@media all and (max-width:440px) {
+		.s4-2{ display: none;}
+		.s4a{ padding-left: 0px;}
+		.s4b{padding-right: 0px;}
+		.s4{padding: 150px 2px;}
+	}
+</style>

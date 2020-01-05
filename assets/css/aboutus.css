@@ -1,0 +1,100 @@
+<style>
+	@font-face{}
+    @font-face{
+      font-family:"華康翩翩體";
+      src:url(華康翩翩體.otf);
+    }
+    @font-face{
+      font-family:"BernardoModaBold";
+      src:url(BernardoModaBold.ttf);
+    }
+
+
+    body{
+      background-color: #fffafa;
+      font-family:微软雅黑;
+    }
+    a{color: #666666;}
+    a:hover{color: #f08080;}
+
+
+/*/////////////////////////////*/
+
+    .nav-logoword{
+      font-family: BernardoModaBold;
+      font-weight: bold;
+      font-size: 40px;
+    }
+    .nav-logoword2{
+      cursor: default;
+      font-family: 微软雅黑;
+      text-indent: 120px;
+      font-size: 20px;
+    }
+    .字pic{
+      width: 180px;
+      height: 78px;
+      margin: -55px 0px 0px 0px;
+    }
+    @media all and (max-width:500px) {
+      .aaaa { display: none; }
+    }
+    .navhr{
+      width: 100%;
+      background-color:lightgray;
+    }
+
+  /*footer*/
+    .footerhr{
+      height: 1px;
+      width: 100%;
+      background-color:black;
+    }
+
+    .word1{
+      cursor: default;
+      font-family: BernardoModaBold;
+      text-align: center;
+      font-weight: bold;
+      font-size: 25px;
+    }
+    .word2{
+      cursor: default;
+      text-align: center;
+      font-size: 12px;
+    }
+    .size{ font-size:24px;}
+    .copyright{
+      cursor: default;
+      text-align: center;
+      font-size: 13px;
+    }		
+	.back-to-top 
+    {
+     display: none; /* 默認是隱藏的，這樣在第一屏才不顯示 */
+     position: fixed; /* 位置是固定的 */
+     bottom: 10px; /* 顯示在頁面底部 */
+     right: 40px; /* 顯示在頁面的右邊 */
+     z-index: 99; /* 確保不被其他功能覆蓋 */
+     color: black; /* 設置文本顏色 */
+     cursor: pointer; /* 滑鼠移到按鈕上顯示手型 */
+    }
+    .back-to-top:hover{color: black;}
+/*///////////////////////////////////////////////////////////////*/
+    table{ margin-top: 100px;}
+    td{ text-align: center;}    
+    
+    .hover{position: relative;}
+    .word{
+        cursor: default;
+        position: absolute;
+        top: 50%;
+        left:50%;
+        color: white;
+        font-size: 50px;
+        display: none;
+    }
+    .hover:hover img{filter: brightness(.5);}
+    .hover:hover .word{display: block;}
+
+</style>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/basic.css">
+	  <link rel="stylesheet" href="../css/wishlist.css">
+
+    <title>AnxinsunWC - 我的最愛</title>
+
+
+  </head>
+
+  <body>
+
+<!---------------------------------------- 以下都不要動------------------------------->
+
+  <div class="fixed-bottom">
+    <nav class="nav justify-content-between navbar-expand-xl|lg|md|sm">
+      <form class="form-inline">
+        <a class="nav-link top-color" href="login.html"><i class="fas fa-user-circle"></i>&nbsp;Login</a>
+        <a class="nav-link top-color" href="mypage.html"><i class="far fa-smile"></i>&nbsp;Mypage</a>
+        <a class="nav-link top-color" href="wishlist.html"><i class="fas fa-heart"></i></a>
+        <a class="nav-link top-color" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+      </form>
+    </nav>
+  </div>
+
+
+  <p class="js-back-to-top back-to-top" title="回到最上">TOP ▲</p>
+  <div class="container-fluid">
+    <div class="fixed-top">
+      <nav class="nav justify-content-between navbar-expand-xl|lg|md|sm nav-topset">
+        <a class="nav-link navbar-brand nav-logoword" href="../../index.html">AnxinsunWC<span class="nav-logoword2">&nbsp;&nbsp;Second Hand Store</span></a>
+        <form class="form-inline computer">
+          <a class="nav-link top-color" href="login.html"><i class="fas fa-user-circle"></i>&nbsp;Login</a>
+          <a class="nav-link top-color" href="mypage.html"><i class="far fa-smile"></i>&nbsp;Mypage</a>
+          <a class="nav-link top-color" href="#"><i class="fas fa-heart"></i>&nbsp;WishList</a>
+          <a class="nav-link top-color" href="cart.html"><i class="fas fa-shopping-cart"></i>&nbsp;Cart</a>
+        </form>
+      </nav>
+
+      <hr>
+
+      <nav class="nav navbar-expand-xl|lg|md|sm nav-downset">
+        <div class="hot">
+        <a class="nav-link title" href="###">Hots</a>
+        <a class="nav-link title2 underline" href="hots.html">熱賣商品</a>
+        </div>
+
+        <div class="a">
+        <a class="nav-link a-title" href="###">Women</a>
+        <a class="nav-link a-title2" href="###">女裝</a>
+          <nav class="nav flex-column a1">
+            <a class="nav-link underline" href="item/women-clothes.html">上衣</a>
+            <a class="nav-link underline" href="item/women-pants.html">褲子</a>
+            <a class="nav-link underline" href="item/women-dress.html">裙子</a>
+            <a class="nav-link underline" href="item/women-coat.html">外套</a>
+          </nav>
+        </div>
+
+        <div class="b">
+        <a class="nav-link b-title" href="###">Men</a>
+        <a class="nav-link b-title2" href="###">男裝</a>
+          <nav class="nav flex-column b1">
+            <a class="nav-link underline" href="item/men-clothes.html">上衣</a>
+            <a class="nav-link underline" href="item/men-pants.html">褲子</a>
+            <a class="nav-link underline" href="item/men-coat.html">外套</a>
+          </nav>
+        </div>
+
+        <div class="c">
+        <a class="nav-link c-title" href="###">Accessories</a>
+        <a class="nav-link c-title2" href="###">單品</a>
+          <nav class="nav flex-column c1">
+            <a class="nav-link underline" href="item/Accessories-ring.html">戒指</a>
+            <a class="nav-link underline" href="item/Accessories-earring.html">耳環</a>
+            <a class="nav-link underline" href="item/Accessories-neckless.html">項鍊</a>
+            <a class="nav-link underline" href="item/Accessories-bracelet.html">手環</a>
+          </nav>
+        </div>
+
+        <a class="nav-link" href="###"><i class="fab fa-sistrix"></i></a>
+        <input type="text" class="search" placeholder="想找什麼呢？">
+
+      </nav>
+    </div>
+  </div>
+
+<!---------------------------------------- 以上都不要動------------------------------->
+
+
+	<div id="step1" class="set">
+	
+	<h3>我的最愛&nbsp;<i class="fas fa-heart" style="color:lightpink; font-size:20px;"></i></h3>
+	<hr style="height: 1px; background-color:#888888;">
+	    	
+	<table class="table table-hover" style="border-top:5px solid #fffafa;">	    	
+        <thead>
+           <tr>
+              <th>
+                <div class="checkbox">
+                    <label>
+                      <input type="checkbox" @click="selectAll(isSelectAll)" v-bind:checked="isSelectAll"> 全選
+                    </label>
+                </div>
+              </th>
+              <th>商品</th>
+              <th>數量</th>
+              <th>單價</th>
+              <th>金額（元）</th>
+              <th>加入Cart</th>
+           </tr>
+        </thead>
+
+        <tbody>
+           <tr v-for="(item,index) in productList">
+              <td>
+                <label>
+                	<input type="checkbox" @click="item.select=!item.select;console.log(item.select)" v-bind:checked="item.select" id="">
+                </label>
+              </td>
+              <td name="name">{{item.name}}</td>
+              <td>
+                <div class="product-num">
+                    <a href="javascript:;" @click="item.num>0?item.num--:0">–</a>
+                    <input type="text" class="num-input" v-model="item.num" name="num">
+                    <a href="javascript:;" @click="item.num++">+</a>
+                </div>
+              </td>
+              <td name="">{{item.price}}</td>
+              <td name="">{{item.price*item.num}}</td>
+              <td name=""><a class="nav-link" href="##"><i class="fas fa-shopping-cart"></i></a></td>
+           </tr>
+        </tbody>
+
+    </table>
+    <a class="nav-link" href="##"><i class="fas fa-trash"></i>&nbsp;刪除所選商品</a>
+	</div>
+    
+
+<!---------------------------------------- 以下都不要動------------------------------->
+
+<footer class="text-center">
+  <hr class="footerhr">
+  <br>
+  <p class="word1">AnxinsunWC</p>
+  <p class="word2">Smile Never Goes Out of Fashion</p>
+
+  <nav class="nav justify-content-center">
+    <a class="nav-link" href="#"><i class="fab fa-facebook-square size"></i></a>
+    <a class="nav-link" href="#"><i class="fab fa-instagram size"></i></a>
+    <a class="nav-link" href="#"><i class="fab fa-line size"></i></a>
+    <a class="nav-link" href="#"><i class="fas fa-envelope size"></i></a>
+  </nav>
+
+  <br>
+  <a style="text-align: center;" href="aboutus.html">About Us</a>
+  <br><br>
+  <p class="copyright">ⓒ 2019 AnxinsunWC. All RIGHTS RESERVED.</p>
+</footer>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/basic.js"></script>
+
+     <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <script type="text/javascript" src="../js/cart.js"></script>
+
+
+<!---------------------------------------- 以上都不要動------------------------------->
+
+  </body>
+</html>
